@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+}
+:root{
+    --tanish: #EDC7B7;
+    --off-white: #EEE2DC;
+    --greyish: #BAB2B5;
+    --imperial-blue: #123C69;
+    --ruby: #AC3B61;
+}
+
+
+/* Throughout */
+section{
+    width: 100%;
+    padding: 8vh 0 8vh 0;
+    margin: auto;
+}
+
+.max-width{
+    width: 100%;
+    padding: 0 80px 0 0;
+    margin: auto;
+}
+
+h2{
+    color: var(--imperial-blue, blue);
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Navbar */
+#Tim-header{
+    color: var(--imperial-blue, blue);
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 2vw;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    background-color: var(--greyish, grey);
+    font-family: 'Merriweather', serif;
+    transition: all 0.3s ease;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    align-items: right;
+}
+.navbar .menu li a{
+    display: block;
+    color: var(--imperial-blue, blue);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 2vw;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: wheat;
+}
+
+/* Home */
+.home{
+    padding: 200px 0;
+    height: 100vh;
+    min-height: 200 px;
+    background-color : var(--off-white, white);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.home .home-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 35px;
+}
+.home .home-content .hello{
+    animation-name: hello-fall;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+#Tim{
+    animation-name: color;
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+#Vuong{
+    animation-name: color;
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-delay: 2.2s;
+}
+#thank-you{
+    animation-name: thank-you-appear;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+}
+@keyframes hello-fall{
+    0%{
+        transform: translateY(-100vh);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    60%{
+        transform: translateY(-5px);
+    }
+    70%{
+        transform: translateY(0);
+    }
+}
+@keyframes color {
+    0%{
+        font-weight: normal;
+    }
+    100%{
+        font-weight: bold;
+        font-color: var(--imperial-blue, blue);
+    }
+}
+@keyframes thank-you-appear{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* About */
+.about{
+    background-color: var(--tanish, tan);
+}
+#about-p{
+    margin: 0 10% 0 10%;
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: var(--ruby, red);
+}
+
+/* Skills */
+.skills{
+    background-color: var(--off-white, white);
+}
+#skills-header{
+    width: 100%;
+}
+h3{
+    font-size: 25px;
+    color: var(--imperial-blue, blue);
+}
+.skill-list{
+    font-size: 18px;
+    color: var(--ruby, red);
+}
+.skills-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Contact */
+.contact{
+    background-color: var(--tanish, tan);
+}
+.contact-content{
+    position: relative;
+    top: 10px;
+    text-align: center;
+}
+.contact-text{
+    position: relative;
+    margin-top: 10px;
+    font-size: 25px;
+    color: var(--imperial-blue, blue);
+}
+.contact-link{
+    color: var(--ruby, red);
+}
+.contact-link:hover{
+    color: var(--imperial-blue, blue);
+}
+
+/* Footer */
+footer{
+    background: black;
+    padding: 15px 23px;
+    color: var(--off-white,white);
+    text-align: center;
+}
